@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Restaurant } from '../models';
 
 @Component({
   selector: 'app-cuisine-list',
@@ -10,9 +11,14 @@ export class CuisineListComponent implements OnInit{
 
 	// TODO Task 2
 	// For View 1
-  listForm!: FormGroup
+  cuisineForm!: FormGroup
 
-  ngOnInit(): void {
-      
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit(): void { }
+  
+  processCuisineForm() {
+    const cuisine: Restaurant = this.cuisineForm.value as Restaurant
   }
+
 }
