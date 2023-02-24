@@ -1,0 +1,2 @@
+TODO: Task 1 - Write the mongo import command here
+mongoimport --db restaurantdb --collection restaurant --file /Users/irfaniman/myproj/csf-assessment/restaurants.json --jsonArray
